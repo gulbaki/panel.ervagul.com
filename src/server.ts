@@ -9,6 +9,7 @@ app.get('/', (_, res) => {
   res.redirect('/admin');
 });
 
+
 // Initialize Payload
 payload.init({
   secret: process.env.PAYLOAD_SECRET,
@@ -21,4 +22,4 @@ payload.init({
 
 // Add your own express routes here
 
-app.listen(3000);
+app.listen(process.env.PORT);
