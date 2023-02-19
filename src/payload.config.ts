@@ -13,7 +13,7 @@ import { Social } from './globals/Social';
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL,
-  cors:['*', 'http://localhost:3001', '0.0.0.0:3001','https://ervagul.com'],
+  cors:['*', 'http://localhost:3001', '0.0.0.0:3001','https://ervagul.com', 'http://localhost:4006'],
   admin: {
     user: Users.slug,
   },
