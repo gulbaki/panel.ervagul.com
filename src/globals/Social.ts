@@ -1,5 +1,4 @@
 import { GlobalConfig } from "payload/types";
-import link from "../fields/link";
 
 export const Social: GlobalConfig = {
     slug: 'social',

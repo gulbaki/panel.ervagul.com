@@ -1,6 +1,5 @@
 import { CollectionConfig } from 'payload/types';
 import path from 'path';
-import { isAdmin } from '../access/isAdmin';
 
 export const Media: CollectionConfig = {
   slug: 'media',
