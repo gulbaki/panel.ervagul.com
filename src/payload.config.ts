@@ -12,8 +12,8 @@ import About from "./collections/About"
 import { Social } from './globals/Social';
 
 export default buildConfig({
-  serverURL: 'http://localhost:3000',
-  cors:['*', 'http://localhost:3001', '0.0.0.0:3001'],
+  serverURL: process.env.SERVER_URL,
+  cors:['*', 'http://localhost:3001', '0.0.0.0:3001','https://ervagul.com'],
   admin: {
     user: Users.slug,
   },
