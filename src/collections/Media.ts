@@ -1,5 +1,6 @@
 import { CollectionConfig } from 'payload/types';
 import path from 'path';
+import { isAdminOrSelf } from '../access/isAdmin'
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -7,6 +8,9 @@ export const Media: CollectionConfig = {
     staticDir: path.resolve(__dirname, '../../media'),
   },
   access: {
+    update: isAdminOrSelf,
+    delete: isAdminOrSelf,
+    create: isAdminOrSelf,
     read: () => true,
   },
   fields: [

@@ -1,6 +1,8 @@
 import { CollectionConfig } from 'payload/types';
 import { slugField } from "../fields/slug";
 import payload from 'payload';
+import { isAdminOrSelf } from '../access/isAdmin'
+
 const Posts: CollectionConfig = {
   slug: 'posts',
   admin: {
@@ -8,6 +10,9 @@ const Posts: CollectionConfig = {
     useAsTitle: 'title',
   },
   access: {
+    update: isAdminOrSelf,
+    delete: isAdminOrSelf,
+    create: isAdminOrSelf,
     read: () => true,
   },
   fields: [
