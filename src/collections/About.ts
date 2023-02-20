@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/types';
+import { isAdminOrSelf } from '../access/isAdmin'
 
 const About: CollectionConfig = {
   slug: 'about',
@@ -8,6 +9,8 @@ const About: CollectionConfig = {
     useAsTitle: 'title',
   },
   access: {
+    update: isAdminOrSelf,
+    delete: isAdminOrSelf,
     read: () => true,
     create: async ({req})  =>  {
        

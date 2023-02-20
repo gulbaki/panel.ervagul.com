@@ -1,10 +1,11 @@
 import { GlobalConfig } from "payload/types";
 import link from "../fields/link";
+import { isAdminOrSelf } from '../access/isAdmin'
 
 export const MainMenu: GlobalConfig = {
   slug: 'main-menu',
   access: {
-    read: () => true,
+    read: () => true, 
   },
   fields: [
     {
